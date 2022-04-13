@@ -403,5 +403,7 @@ table{
     .menu-bar{
         display: block;
         position: fixed;
+        top: 4%;
+        right: 2%;
     }
 }
