@@ -84,7 +84,7 @@ li{
     width: 1.5rem;
     height: 1.5rem;
     cursor: pointer;
-    z-index: 1;
+    
 }
 .bar-lines,
 .bar-lines::before,
@@ -402,5 +402,6 @@ table{
     }
     .menu-bar{
         display: block;
+        position: fixed;
     }
 }
