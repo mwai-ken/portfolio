@@ -78,7 +78,7 @@ li{
 /*menu-bar*/
 .menu-bar{
     position: relative;
-    display: block;
+    display: none;
     justify-content: center;
     align-items: center;
     width: 1.5rem;
@@ -399,5 +399,8 @@ table{
     }
     .nav-links.active{
         transform: translateX(0%);
+    }
+    .menu-bar{
+        display: block;
     }
 }
