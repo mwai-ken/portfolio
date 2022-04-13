@@ -75,7 +75,47 @@ li{
     color: beige;
     width: 100px;
 }
-
+/*menu-bar*/
+.menu-bar{
+    position: relative;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    z-index: 1;
+}
+.bar-lines,
+.bar-lines::before,
+.bar-lines::after{
+    width: 1.5rem;
+    height: 0.1rem;
+    background-color: azure;
+    transition: all 0.5s ease-in-out;
+}
+.bar-lines::before,
+.bar-lines::after{
+    content: "";
+    position: absolute;
+}
+.bar-lines::before{
+    transform: translateY(0.5rem);
+}
+.bar-lines::after{
+    transform: translateY(0.5rem);
+}
+/*animation to the button*/
+.menu-bar.active .bar-lines{
+    transform: translateX(2rem);
+    background-color: transparent;
+}
+.menu-bar.active .bar-lines::before{
+    transform: rotate(45deg)  translate(-1.5rem,1.5rem);
+}
+.menu-bar.active .bar-lines::after{
+    transform: rotate(-45deg)  translate(-1.5rem,-1.5rem);
+}
 /*end of navbar*/
 .wording{
     cursor: pointer;
@@ -348,8 +388,7 @@ table{
         flex-direction: column;
         padding: 80px ;
         z-index: 999;
-      
-        backdrop-filter: blur(1rem);
+        transform: translateX(100%);
         transition: 0.5s ease-in-out;
 
         
@@ -357,5 +396,8 @@ table{
     .nav-links ul li {
         padding: auto;
        
+    }
+    .nav-links.active{
+        transform: translateX(0%);
     }
 }
